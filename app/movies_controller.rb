@@ -21,10 +21,11 @@ def can_be_created_with_a_hash_of_attributes
       in_theaters: false
   }
   movie = Movie.new
-  attributes.each do |key, value|
-    movie.key = value
-  end
-  movie
+  movie.title = attributes[:title]
+  movie.release_date = attributes[:release_date]
+  movie.director = attributes[:director]
+  movie.lead = attributes[:lead]
+  movie.in_theaters = attributes[:in_theaters]
 end
 
 def can_be_created_in_a_block(args = __)
