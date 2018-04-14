@@ -22,7 +22,7 @@ def can_be_created_with_a_hash_of_attributes
   }
   movie = Movie.new
   attributes.each do |key, value|
-    movie[key] = value
+    movie.key = value
   end
   movie
 end
